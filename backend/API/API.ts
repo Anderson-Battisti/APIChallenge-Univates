@@ -1,10 +1,13 @@
 import express, { Express } from "express";
 import cors from "cors";
+import { productRoute } from "../routes/productRoute";
 
 let server: Express = express();
 const serverPort = 2000;
 
 server.use(cors());
+server.use(productRoute);
+
 
 server.listen(serverPort, () =>
 {
