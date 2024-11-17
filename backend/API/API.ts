@@ -6,6 +6,7 @@ let server: Express = express();
 const serverPort = 2000;
 
 server.use(cors());
+server.use(express.json());
 server.use(productRoute);
 
 
